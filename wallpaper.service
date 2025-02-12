@@ -1,0 +1,14 @@
+[Unit]
+Description=Change wallpaper every minute
+After=network-online.target
+
+[Service]
+ExecStart=%h/.scripts/wallGenZ/wallpaper.sh
+Restart=on-failure
+RestartSec=10
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
+StartLimitIntervalSec=5min
+StartLimitBurst=3
+
+[Install]
+WantedBy=default.target
