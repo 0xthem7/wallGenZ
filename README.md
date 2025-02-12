@@ -27,6 +27,6 @@ cp ~/.scripts/wallGenZ/wallpaper.timer ~/.config/systemd/user/wallpaper.timer
 **Service initiating**
 ```
 systemctl --user daemon-reload
-systemctl --user restart wallpaper.service
-systemctl --user restart wallpaper.timer
+systemctl --user start wallpaper.service
+systemctl --user start wallpaper.timer
 ```
